@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\visauk.gif</ImageUrl>
+    <NavigateUrl xmlns="">http://visa.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">us</AlternateText>
+    <Keyword xmlns="">us</Keyword>
+  </Ad>
+</Advertisements>

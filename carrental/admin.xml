@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\car-rental-seattle.jpg</ImageUrl>
+    <NavigateUrl xmlns="">http://carrental.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">car</AlternateText>
+    <Keyword xmlns="">car</Keyword>
+  </Ad>
+</Advertisements>

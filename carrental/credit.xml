@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\moneybucksonline120.gif</ImageUrl>
+    <NavigateUrl xmlns="">http://job.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">job</AlternateText>
+    <Keyword xmlns="">job</Keyword>
+  </Ad>
+</Advertisements>
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\Learnnext_CPL_730x90_Aug09.jpg</ImageUrl>
+    <NavigateUrl xmlns="">http://cbse.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">cbse</AlternateText>
+    <Keyword xmlns="">cbse</Keyword>
+  </Ad>
+</Advertisements>
+

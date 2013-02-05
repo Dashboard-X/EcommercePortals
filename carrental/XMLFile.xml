@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\bajaj-logo.gif</ImageUrl>
+    <NavigateUrl xmlns="">http://google.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">bajaj</AlternateText>
+    <Keyword xmlns="">bajaj</Keyword>
+    </Ad>
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\levis.jpg</ImageUrl>
+    <NavigateUrl xmlns="">http://google.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">levis</AlternateText>
+    <Keyword xmlns="">levis</Keyword>
+  </Ad>
+</Advertisements>

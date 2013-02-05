@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\bb_cricket_on_mobile.gif</ImageUrl>
+    <NavigateUrl xmlns="">http://yahoo.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">mobile</AlternateText>
+    <Keyword xmlns="">mobile</Keyword>
+  </Ad>
+</Advertisements>

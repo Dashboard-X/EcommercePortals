@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements xmlns="http://schemas.microsoft.com/AspNet/AdRotator-Schedule-File">
+  <Ad xmlns="">
+    <ImageUrl xmlns="">.\images\BM_Marriage_160x600_july09.jpg</ImageUrl>
+    <NavigateUrl xmlns="">http://shaadi.com</NavigateUrl>
+    <Impressions xmlns="">100</Impressions>
+    <AlternateText xmlns="">abc</AlternateText>
+    <Keyword xmlns="">abc</Keyword>
+  </Ad>
+</Advertisements>

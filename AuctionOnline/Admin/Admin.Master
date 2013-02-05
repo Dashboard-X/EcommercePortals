@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="AuctionOnline.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+<link rel="Stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="engine1/style.css" media="screen" />
+	<style type="text/css">a#vlb{display:none}</style>
+	<script type="text/javascript" src="engine1/jquery.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+   <div id="container">
+
+<div id="header">
+	<div id="wowslider-container1">
+	<div class="ws_images">
+<a href="#"><img src="images/images/Get Prize.jpg" alt="001 (1)" title="Special Offer" id="wows0"/></a>
+<a href="#"><img src="images/images/Latest.jpg" alt="001 (2)" title="001 (2)" id="wows1"/></a>
+<a href="#"><img src="images/images/Loot Sale.jpg" alt="001 (3)" title="001 (3)" id="wows2"/></a>
+<a href="#"><img src="images/images/Maximum Bid.jpg" alt="001 (4)" title="001 (4)" id="wows3"/></a>
+<a href="#"><img src="images/images/Rocking Sale.jpg" alt="001 (5)" title="001 (5)" id="wows4"/></a>
+<a href="#"><img src="images/images/Special Offer.jpg" alt="001 (6)" title="001 (6)" id="wows5"/></a>
+<a href="#"><img src="images/images/Special Offer1.jpg" alt="001 (7)" title="001 (7)" id="wows6"/></a>
+</div>
+<div class="ws_bullets"><div>
+<a href="#wows0" title="001 (1)"><img src="images/images/Get Prize.jpg" alt="001 (1)"/>1</a>
+<a href="#wows1" title="001 (2)"><img src="images/images/Latest.jpg" alt="001 (2)"/>2</a>
+<a href="#wows2" title="001 (3)"><img src="images/images/Loot Sale.jpg" alt="001 (3)"/>3</a>
+<a href="#wows3" title="001 (4)"><img src="images/images/Maximum Bid.jpg" alt="001 (4)"/>4</a>
+<a href="#wows4" title="001 (5)"><img src="images/images/Rocking Sale.jpg" alt="001 (5)"/>5</a>
+<a href="#wows5" title="001 (6)"><img src="images/images/Special Offer.jpg" alt="001 (6)"/>6</a>
+<a href="#wows6" title="001 (7)"><img src="images/images/Special Offer1.jpg" alt="001 (7)"/>7</a>
+</div></div>
+<a style="display:none" href="http://wowslider.com">Image Slider Html by WOWSlider.com v1.7</a>
+	<div class="ws_shadow"></div>
+	</div>
+	<script type="text/javascript" src="engine1/script.js"></script>
+
+
+
+</div>
+
+
+<div id="hmenu">
+
+               <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+               </asp:ContentPlaceHolder>
+</div>
+
+<div id="vmenu">
+
+<ul class="vmenu">
+<li id="esp">
+Menu Section
+</li>
+<li>
+<a href="AddUser.aspx"> User</a>
+</li>
+<li>
+<a href="Product.aspx">
+Product</a>
+</li>
+<li>
+<a href="UserLogReport.aspx">
+User LogIn Report</a>
+</li>
+<li>
+<a href="ProductReport.aspx">
+Product Report</a>
+</li>
+<li>
+<a href="SoldProduct.aspx">
+Sold Product Report</a>
+</li>
+<li>
+<a href="AddUser.aspx">
+Data</a>
+</li>
+
+</ul>
+<div class="jquery">
+
+<table border="1" cellpadding="0" cellspacing="0">
+<td class="hcell" height="30px">
+
+</td>
+<tr>
+<td width="220px" height="250px">
+
+</td>
+
+
+
+</table>
+</div>
+
+
+</div>
+
+<div id="cont">
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+
+</div>
+
+
+<div id="footer">
+<ul class="ul">
+<li>
+
+</li>
+<li>
+
+</li>
+<li>
+
+</li>
+</ul>
+
+
+</div>
+
+</div>
+    </form>
+</body>
+</html>

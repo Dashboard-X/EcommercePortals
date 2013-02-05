@@ -1,0 +1,238 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CompOnLine.master.cs"
+    Inherits="CopmuterOnLine.CompOnLine" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-5" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+        .style2
+        {
+            height: 48px;
+        }
+        .style7
+        {
+            width: 148px;
+        }
+        .style8
+        {
+            height: 20px;
+            width: 232px;
+        }
+        .style9
+        {
+            width: 232px;
+        }
+    </style>
+</head>
+<body>
+    <form id="f1" runat="server">
+    <div id="header">
+        <div class="block1">
+            <ul>
+                <li>
+                    <img src="images/square.jpg" alt="" width="11" height="11" class="squ" />
+                    Language : 
+                    <select class="select">
+                        <option value="">English</option>
+                        <option value="">French</option>
+                    </select>
+                        
+                </li>
+                <li>
+                    <img src="images/square.jpg" alt="" width="11" height="11" class="squ" />
+                    Currencies :
+                    <select class="select">
+                        <option value="">CAN Dollar</option>
+                        <option value="">US Dollar</option>
+                    </select>
+                </li>
+            </ul>
+        </div>
+        <div class="block2">
+            <ul>
+                
+                <li><a href="#">Search</a></li>
+                
+                <li><a href="Registercustomer.aspx">Create New Account</a></li>
+                <li><a href="Default.aspx">Customer Login</a>
+                    </li>
+            </ul>
+        </div>
+        <div class="block3" style="background-color:#A9F5F2">
+        <a href="Shoppingcart.aspx">
+                <img src="images/cart.jpg" alt="" width="35" height="25" align="top" /></a> <span>Shopping Cart</span>
+        <asp:Panel ID="SmallCartPanel" runat="server" Visible="false" Width="146px">
+            <table border="1" width="120px" cellpadding="0" cellspacing="0" style="border: solid 1px silver">
+                
+                <tr>
+                    <td style="color:#FFFFFF"><asp:Literal ID="ltCartItem" runat="server"></asp:Literal></td>
+                </tr>
+                
+                
+            </table>
+            </asp:Panel>
+            
+        </div>
+        <font color="red">
+            <marquee behavior="alternate">Welcome !!!</marquee>
+        </font><a href="#">
+            <img src="images/name.jpg" alt="" width="396" height="117" /></a><img src="images/pic1.jpg"
+                alt="" width="370" height="117" /><br />
+        <ul class="menu">
+            <li><a href="Default.aspx">
+                <img src="images/but1.jpg" alt="" width="135" height="36" /></a></li>
+            <li><a href="Desktop.aspx">
+                <img src="images/but2.jpg" alt="" width="130" height="36" /></a></li>
+            <li><a href="Special.aspx">
+                <img src="images/but3.jpg" alt="" width="130" height="36" /></a></li>
+            <li><a href="#">
+                <img src="images/but4.jpg" alt="" width="130" height="36" /></a></li>
+            <li><a href="Contactus.aspx">
+                <img src="images/but5.jpg" alt="" height="36" /></a></li>
+                <li><a href="#">
+                <img src="images/butclean.jpg" alt="" width="120" height="36" /></a></li>
+            
+        </ul>
+    </div>
+    <br />
+    <div id="content">
+        <div class="inner_copy">
+            <a href="http://www.site2you.com/">Website Builder</a> <a href="http://www.freetemplatesonline.com/">
+                fto</a> <a href="http://www.websitetemplates.org/">websitetemplates.org</a>
+            <a href="http://www.webdesign.org/website-design">Website Design</a></div>
+
+        <div class="left">
+        <asp:Panel ID="SigninPanel" runat="server" Visible="true">
+                <table width="160" style="border: Solid 1px silver">
+                    <tr>
+                        <td colspan="2" style="height: 20px; font-weight:bold">
+                        Sign in</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">E-mail (username)</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 156px"><asp:TextBox id="LoginUserName" runat="server" Width="156px"></asp:TextBox></td>
+                        <td style="width: 4px"><asp:RequiredFieldValidator ControlToValidate="LoginUserName" Display="Static" ErrorMessage="*" runat="server" ID="vUserName" validationgroup="Login" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">Password</td>
+                    </tr>
+                    <tr>
+                        <td style="width: 156px"><asp:TextBox id="LoginUserPass" TextMode="password" runat="server" Width="156px"></asp:TextBox></td>
+                        <td style="width: 4px"><asp:RequiredFieldValidator ControlToValidate="LoginUserPass" Display="Static" ErrorMessage="*" runat="server" ID="vUserPass" validationgroup="Login" /></td>
+                    </tr>
+                    <tr>
+                    
+                        <td colspan="2" class="style2"><asp:CheckBox id="chkPersistCookie" Text="Stay signed in" runat="server" autopostback="false" /><br />
+                        <asp:Button Text="Sign in" runat="server" ID="cmdLogin" validationgroup="Login" OnClick="cmdLogin_Click"></asp:Button></td>
+                    </tr>
+                </table>
+                <asp:Label id="lblMessage" ForeColor="Red" Font-Size="8pt" runat="server" Width="200px" />
+                <asp:HyperLink ID="hplRegister" runat="server" NavigateUrl="~/Registercustomer.aspx">Register as a customer</asp:HyperLink><br />
+                <asp:HyperLink ID="hplNewPassword" runat="server" NavigateUrl="~/Forgotpassword.aspx">Fortgot your password?</asp:HyperLink><br />
+                <br />
+                </asp:Panel>
+
+
+                <asp:Panel ID="CustomerPanel" runat="server" Visible="false">
+                <asp:Label ID="lblUserName" Font-Bold="true" runat="server" Text=""></asp:Label><br />
+                <asp:HyperLink ID="hplOrders" runat="server" NavigateUrl="~/Orders.aspx">List of orders</asp:HyperLink><br />
+                <asp:HyperLink ID="hplShoppingCart" runat="server" NavigateUrl="~/Shoppingcart.aspx">Shopping cart</asp:HyperLink><br /><br />
+                <asp:LinkButton ID="btnSignOut" runat="server" OnClick="btnSignOut_Click">Sign Out</asp:LinkButton><br />
+                <br />
+                </asp:Panel>
+                <asp:HiddenField ID="HiddenCustomerID" runat="server" />
+
+
+
+
+                <asp:Panel ID="PanelAdmin" runat="server" Visible="false" Height="214px" 
+                Width="195px">
+                <table style="border: Solid 1px silver; height: 158px; width: 186px;">
+                    <tr>
+                        <td style="font-weight:bold" class="style8">
+                        Admin Sign in</td>
+                    </tr>
+                    <tr>
+                        <td class="style9">E-mail (username)</td>
+                    </tr>
+                    <tr>
+                        <td class="style9"><asp:TextBox id="txtUsername" runat="server" Width="156px"></asp:TextBox><asp:requiredfieldvalidator id="rvUserValidator" runat="server" controltovalidate="txtUsername" errormessage="You must supply a Username!"
+                           display="None"></asp:requiredfieldvalidator></td>
+                        
+                    </tr>
+                                        
+                    <tr>
+                    <td class="style9">Security Code</td>
+                    </tr>
+                    <tr>
+                        <td class="style9"><asp:TextBox id="txtsecCode" runat="server" Width="156px"></asp:TextBox><asp:requiredfieldvalidator id="rvSecCodeValidator" runat="server" controltovalidate="txtsecCode" errormessage="Empty security code not accepted"
+                           display="None"></asp:requiredfieldvalidator></td>
+                        
+                        </tr>
+                    <tr>
+                        
+                       <td class="style9"> 
+                           <asp:Button ID="btnAdminlogin" runat="server"  
+                                Text="Sign in" validationgroup="Login" onclick="btnAdminlogin_Click"></asp:Button></td>
+                    
+                    </tr>
+                </table>
+                <asp:Label id="lblAdmin" ForeColor="Red" Font-Size="8pt" runat="server" Width="200px" />
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Registercustomer.aspx">Register as a customer</asp:HyperLink><br />
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Forgotpassword.aspx">Fortgot your password?</asp:HyperLink><br />
+                <br />
+                </asp:Panel>
+        
+
+
+
+            <img src="images/title1.jpg" alt="" width="198" height="30" />
+            <br />
+            <ul>
+                <li class="dots">
+                    <asp:LinkButton ID="lnkDesktop" runat="server" BackColor="Yellow" 
+                        onclick="lnkDesktop_Click">Desktop</asp:LinkButton></li>
+                <li class="dots">
+                    <asp:LinkButton ID="lnkLaptop" runat="server" BackColor="LightCyan" 
+                        onclick="lnkLaptop_Click">Notebooks</asp:LinkButton></li>
+                <li class="dots"><asp:LinkButton ID="lnkAdmin" runat="server" BackColor="White"
+                        onclick="lnkAdmin_Click">Admin User</asp:LinkButton></li>
+                <li class="dots"><a href="Servers.aspx">Servers</a></li>
+                <li class="dots"><a href="#">Storage</a></li>
+                <li class="dots"><a href="#">Networking</a></li>
+                <li class="dots"><a href="#">Digital Displays</a></li>
+                <li class="dots"><a href="#">Digital Cameras</a></li>
+                <li class="dots"><a href="#">Remanufactured</a></li>
+                <li class="style1"><a href="#">Fax Machines</a></li>
+            </ul>
+            <img src="images/title2.jpg" alt="" width="198" height="30" /><br />
+            <ul>
+                <li class="dots"><a href="Special.aspx" style="background-color:White">News</a></li>
+                <li class="dots"><a href="#">Sale</a></li>
+                <li class="dots"><a href="#">Pro Order</a></li>
+                <li><a href="#">Coming Soon</a></li>
+            </ul>
+            
+            <br />
+            
+        </div>   
+        <div class="right">
+            
+           <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2007 CompanyName. All Rights Reserved / <a href="http://www.webdesign.org"
+            class="powered">Web Design</a> by <a href="http://www.freetemplatesonline.com" class="powered">
+                Free Templates</a> Online<br />
+        <a href="#" class="terms">Terms of Use</a> / <a href="#" class="terms">Privacy Policy</a>
+    </div>
+    </form>
+</body>
+</html>

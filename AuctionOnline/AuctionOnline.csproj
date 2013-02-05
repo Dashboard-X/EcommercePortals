@@ -1,0 +1,537 @@
+﻿<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{98D53D7F-27A5-457C-BD74-51189371B362}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AuctionOnline</RootNamespace>
+    <AssemblyName>AuctionOnline</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=3.5.50508.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\AjaxControlToolkit.Binary.NET35\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Web, Version=10.5.3700.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\CrystalDecisions.Web\10.5.3700.0__692fbea5521e1304\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\main.css" />
+    <Content Include="css\style.css" />
+    <Content Include="engine1\arrows.gif" />
+    <Content Include="engine1\bullet.png" />
+    <Content Include="engine1\jquery.js" />
+    <Content Include="engine1\script.js" />
+    <Content Include="engine1\shadow.png" />
+    <Content Include="engine1\style.css" />
+    <Content Include="engine1\triangle.png" />
+    <Content Include="images\body.jpg" />
+    <Content Include="images\container.png" />
+    <Content Include="images\images\Get Prize.jpg" />
+    <Content Include="images\images\Latest.jpg" />
+    <Content Include="images\images\Loot Sale.jpg" />
+    <Content Include="images\images\Maximum Bid.jpg" />
+    <Content Include="images\images\Rocking Sale.jpg" />
+    <Content Include="images\images\Special Offer.jpg" />
+    <Content Include="images\images\Special Offer1.jpg" />
+    <Content Include="images\tooltips\Get Prize.jpg" />
+    <Content Include="images\tooltips\Latest.jpg" />
+    <Content Include="images\tooltips\Loot Sale.jpg" />
+    <Content Include="images\tooltips\Maximum Bid.jpg" />
+    <Content Include="images\tooltips\Rocking Sale.jpg" />
+    <Content Include="images\tooltips\Special Offer.jpg" />
+    <Content Include="images\tooltips\Special Offer1.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLog.aspx.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLog.aspx.designer.cs">
+      <DependentUpon>AdminLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Product.aspx.designer.cs">
+      <DependentUpon>Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ProductReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProductReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\SoldProduct.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SoldProduct.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\ULReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ULReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\UserLogReport.aspx.cs">
+      <DependentUpon>UserLogReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserLogReport.aspx.designer.cs">
+      <DependentUpon>UserLogReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ProductReport.aspx.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ProductReport.aspx.designer.cs">
+      <DependentUpon>ProductReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SoldProduct.aspx.cs">
+      <DependentUpon>SoldProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\SoldProduct.aspx.designer.cs">
+      <DependentUpon>SoldProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\user.Master.cs">
+      <DependentUpon>user.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\user.Master.designer.cs">
+      <DependentUpon>user.Master</DependentUpon>
+    </Compile>
+    <Compile Include="User\Status.aspx.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Status.aspx.designer.cs">
+      <DependentUpon>Status.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Photo.aspx.cs">
+      <DependentUpon>Photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Photo.aspx.designer.cs">
+      <DependentUpon>Photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\AddProduct.aspx.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\AddProduct.aspx.designer.cs">
+      <DependentUpon>AddProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Computer.aspx.cs">
+      <DependentUpon>Computer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Computer.aspx.designer.cs">
+      <DependentUpon>Computer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Bids.aspx.cs">
+      <DependentUpon>Bids.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Bids.aspx.designer.cs">
+      <DependentUpon>Bids.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Furniture.aspx.cs">
+      <DependentUpon>Furniture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Furniture.aspx.designer.cs">
+      <DependentUpon>Furniture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Mobile.aspx.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Mobile.aspx.designer.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Electronics.aspx.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Electronics.aspx.designer.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Other.aspx.cs">
+      <DependentUpon>Other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Other.aspx.designer.cs">
+      <DependentUpon>Other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyProducts.aspx.cs">
+      <DependentUpon>MyProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyProducts.aspx.designer.cs">
+      <DependentUpon>MyProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\MyproductPhoto.aspx.cs">
+      <DependentUpon>MyproductPhoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\MyproductPhoto.aspx.designer.cs">
+      <DependentUpon>MyproductPhoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\CreateUser.aspx.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\CreateUser.aspx.designer.cs">
+      <DependentUpon>CreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Setting.aspx.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Setting.aspx.designer.cs">
+      <DependentUpon>Setting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\FeedBack.aspx.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User\About Us.aspx.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User\About Us.aspx.designer.cs">
+      <DependentUpon>About Us.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="visitor.Master.cs">
+      <DependentUpon>visitor.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="visitor.Master.designer.cs">
+      <DependentUpon>visitor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs.aspx.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs.aspx.designer.cs">
+      <DependentUpon>AboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Computer.aspx.cs">
+      <DependentUpon>Computer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Computer.aspx.designer.cs">
+      <DependentUpon>Computer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Photo.aspx.cs">
+      <DependentUpon>Photo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Photo.aspx.designer.cs">
+      <DependentUpon>Photo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Furniture.aspx.cs">
+      <DependentUpon>Furniture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Furniture.aspx.designer.cs">
+      <DependentUpon>Furniture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile.aspx.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile.aspx.designer.cs">
+      <DependentUpon>Mobile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Electronics.aspx.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Electronics.aspx.designer.cs">
+      <DependentUpon>Electronics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Other.aspx.cs">
+      <DependentUpon>Other.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Other.aspx.designer.cs">
+      <DependentUpon>Other.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\Admin.Master" />
+    <Content Include="Admin\AdminLog.aspx" />
+    <Content Include="Admin\css\main.css" />
+    <Content Include="Admin\css\site.css" />
+    <Content Include="Admin\css\style.css" />
+    <Content Include="Admin\engine1\arrows.gif" />
+    <Content Include="Admin\engine1\bullet.png" />
+    <Content Include="Admin\engine1\jquery.js" />
+    <Content Include="Admin\engine1\script.js" />
+    <Content Include="Admin\engine1\shadow.png" />
+    <Content Include="Admin\engine1\style.css" />
+    <Content Include="Admin\engine1\triangle.png" />
+    <Content Include="Admin\images\body.jpg" />
+    <Content Include="Admin\images\container.png" />
+    <Content Include="Admin\images\images\Get Prize.jpg" />
+    <Content Include="Admin\images\images\Latest.jpg" />
+    <Content Include="Admin\images\images\Loot Sale.jpg" />
+    <Content Include="Admin\images\images\Maximum Bid.jpg" />
+    <Content Include="Admin\images\images\Rocking Sale.jpg" />
+    <Content Include="Admin\images\images\Special Offer.jpg" />
+    <Content Include="Admin\images\images\Special Offer1.jpg" />
+    <Content Include="Admin\images\tooltips\Get Prize.jpg" />
+    <Content Include="Admin\images\tooltips\Latest.jpg" />
+    <Content Include="Admin\images\tooltips\Loot Sale.jpg" />
+    <Content Include="Admin\images\tooltips\Maximum Bid.jpg" />
+    <Content Include="Admin\images\tooltips\Rocking Sale.jpg" />
+    <Content Include="Admin\images\tooltips\Special Offer.jpg" />
+    <Content Include="Admin\images\tooltips\Special Offer1.jpg" />
+    <Content Include="Admin\AddUser.aspx" />
+    <Content Include="Admin\Product.aspx" />
+    <None Include="Admin\engine1\Thumbs.db" />
+    <None Include="Admin\images\images\Thumbs.db" />
+    <None Include="Admin\images\Thumbs.db" />
+    <None Include="Admin\images\tooltips\Thumbs.db" />
+    <None Include="engine1\Thumbs.db" />
+    <None Include="images\images\Thumbs.db" />
+    <None Include="images\tooltips\Thumbs.db" />
+    <None Include="User\engine1\Thumbs.db" />
+    <None Include="User\images\images\Thumbs.db" />
+    <None Include="User\images\Thumbs.db" />
+    <None Include="User\images\tooltips\Thumbs.db" />
+    <Content Include="Admin\UserLogReport.aspx" />
+    <Content Include="Admin\ProductReport.aspx" />
+    <Content Include="Admin\SoldProduct.aspx" />
+    <Content Include="images\1.jpg" />
+    <Content Include="images\2.jpg" />
+    <Content Include="User\About Us.aspx" />
+    <Content Include="visitor.Master" />
+    <Content Include="css\site.css" />
+    <Content Include="Photo\1.jpg" />
+    <Content Include="Photo\1icon-brochure-active.png" />
+    <Content Include="Photo\2.jpg" />
+    <Content Include="Photo\2icon-logo-active.png" />
+    <Content Include="Photo\4icon-promo-active.png" />
+    <Content Include="Photo\5icon-brochure-active.png" />
+    <Content Include="Photo\5icon-stny-active.png" />
+    <Content Include="Photo\unkown.png" />
+    <Content Include="User\css\main.css" />
+    <Content Include="User\css\site.css" />
+    <Content Include="User\css\style.css" />
+    <Content Include="User\engine1\arrows.gif" />
+    <Content Include="User\engine1\bullet.png" />
+    <Content Include="User\engine1\jquery.js" />
+    <Content Include="User\engine1\script.js" />
+    <Content Include="User\engine1\shadow.png" />
+    <Content Include="User\engine1\style.css" />
+    <Content Include="User\engine1\triangle.png" />
+    <Content Include="User\images\body.jpg" />
+    <Content Include="User\images\container.png" />
+    <Content Include="User\images\images\Get Prize.jpg" />
+    <Content Include="User\images\images\Latest.jpg" />
+    <Content Include="User\images\images\Loot Sale.jpg" />
+    <Content Include="User\images\images\Maximum Bid.jpg" />
+    <Content Include="User\images\images\Rocking Sale.jpg" />
+    <Content Include="User\images\images\Special Offer.jpg" />
+    <Content Include="User\images\images\Special Offer1.jpg" />
+    <Content Include="User\images\tooltips\Get Prize.jpg" />
+    <Content Include="User\images\tooltips\Latest.jpg" />
+    <Content Include="User\images\tooltips\Loot Sale.jpg" />
+    <Content Include="User\images\tooltips\Maximum Bid.jpg" />
+    <Content Include="User\images\tooltips\Rocking Sale.jpg" />
+    <Content Include="User\images\tooltips\Special Offer.jpg" />
+    <Content Include="User\images\tooltips\Special Offer1.jpg" />
+    <Content Include="User\Login.aspx" />
+    <Content Include="User\user.Master" />
+    <Content Include="User\Status.aspx" />
+    <Content Include="User\Photo.aspx" />
+    <Content Include="User\AddProduct.aspx" />
+    <Content Include="User\Computer.aspx" />
+    <Content Include="User\Bids.aspx" />
+    <Content Include="User\Furniture.aspx" />
+    <Content Include="User\Mobile.aspx" />
+    <Content Include="User\Electronics.aspx" />
+    <Content Include="User\Other.aspx" />
+    <Content Include="User\MyProducts.aspx" />
+    <Content Include="User\MyproductPhoto.aspx" />
+    <Content Include="User\CreateUser.aspx" />
+    <Content Include="User\Contact.aspx" />
+    <Content Include="User\Setting.aspx" />
+    <Content Include="User\Sitemap.aspx" />
+    <Content Include="User\FeedBack.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Sitemap.aspx" />
+    <Content Include="AboutUs.aspx" />
+    <Content Include="Computer.aspx" />
+    <Content Include="Photo.aspx" />
+    <Content Include="Furniture.aspx" />
+    <Content Include="Mobile.aspx" />
+    <Content Include="Electronics.aspx" />
+    <Content Include="Other.aspx" />
+    <Content Include="Contact.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\ProductReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProductReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SoldProduct.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SoldProduct.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\ULReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ULReport.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\images\photo\" />
+    <Folder Include="Admin\Report\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="User\images\photo\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
